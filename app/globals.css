@@ -1,26 +1,276 @@
 @import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+@theme {
+  /* Brand palette */
+  --color-ink: #0d0d0d;
+  --color-ink-soft: #121212;
+  --color-ink-card: #1a1a1a;
+  --color-ink-line: #2a2620;
+  --color-gold: #d4af37;
+  --color-gold-light: #f0d87c;
+  --color-gold-dark: #b8902b;
+  --color-cream: #f5efe2;
+  --color-muted: #c9c9c9;
+  --color-faint: #8a8a8a;
+
+  /* Fonts (provided by next/font as CSS variables) */
+  --font-sans: var(--font-montserrat), ui-sans-serif, system-ui, sans-serif;
+  --font-serif: var(--font-playfair), Georgia, serif;
+  --font-display: var(--font-cinzel), Georgia, serif;
+  --font-script: var(--font-greatvibes), cursive;
+}
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  color-scheme: dark;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--color-ink);
+  color: #ffffff;
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+/* ---- Brand utilities ---- */
+
+/* Metallic gold gradient text (logo / accents) */
+.text-gold-gradient {
+  background: linear-gradient(
+    100deg,
+    var(--color-gold-dark) 0%,
+    var(--color-gold-light) 40%,
+    var(--color-gold) 60%,
+    var(--color-gold-dark) 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.bg-gold-gradient {
+  background: linear-gradient(
+    100deg,
+    var(--color-gold-dark) 0%,
+    var(--color-gold-light) 45%,
+    var(--color-gold) 70%,
+    var(--color-gold-dark) 100%
+  );
+}
+
+/* Thin gold hairline divider (brand motif) */
+.gold-hairline {
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--color-gold) 50%,
+    transparent
+  );
+}
+
+/* Eyebrow / section label */
+.eyebrow {
+  font-family: var(--font-display);
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+}
+
+/* Soft radial glow behind hero / sections */
+.gold-glow {
+  background: radial-gradient(
+    circle at center,
+    rgba(212, 175, 55, 0.18) 0%,
+    rgba(212, 175, 55, 0.04) 40%,
+    transparent 70%
+  );
+}
+
+/* Subtle gold border card */
+.card-gold {
+  border: 1px solid color-mix(in srgb, var(--color-gold) 22%, transparent);
+  background: linear-gradient(
+    160deg,
+    var(--color-ink-card) 0%,
+    var(--color-ink-soft) 100%
+  );
+  transition:
+    border-color 0.45s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.45s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.card-gold:hover {
+  border-color: color-mix(in srgb, var(--color-gold) 55%, transparent);
+  box-shadow: 0 26px 60px -28px rgba(212, 175, 55, 0.3);
+}
+
+/* Itinerary markdown styling */
+.itinerary-prose {
+  color: var(--color-muted);
+}
+.itinerary-prose :is(h1, h2, h3, h4, h5, h6) {
+  font-family: var(--font-serif);
+  color: var(--color-gold);
+  margin-top: 1.4em;
+  margin-bottom: 0.5em;
+  line-height: 1.2;
+}
+.itinerary-prose :is(h1, h2, h4) {
+  font-size: 1.3rem;
+}
+.itinerary-prose :is(h3, h5, h6) {
+  font-size: 1.05rem;
+  color: var(--color-gold-light);
+}
+.itinerary-prose strong {
+  color: #fff;
+}
+.itinerary-prose p {
+  margin: 0.5em 0;
+  line-height: 1.7;
+}
+.itinerary-prose ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0.5em 0;
+}
+.itinerary-prose li {
+  position: relative;
+  padding-left: 1.5em;
+  margin: 0.35em 0;
+  line-height: 1.6;
+}
+.itinerary-prose li::before {
+  content: "✦";
+  position: absolute;
+  left: 0;
+  color: var(--color-gold);
+  font-size: 0.8em;
+  top: 0.15em;
+}
+.itinerary-prose hr {
+  border: none;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--color-gold), transparent);
+  margin: 1.5em 0;
+}
+
+::selection {
+  background: rgba(212, 175, 55, 0.3);
+}
+
+/* Visible keyboard focus for every interactive element */
+:focus-visible {
+  outline: 2px solid var(--color-gold);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+@keyframes twinkle {
+  0%, 100% { opacity: 0.25; transform: scale(0.85); }
+  50% { opacity: 1; transform: scale(1.1); }
+}
+.animate-twinkle {
+  animation: twinkle 3.5s ease-in-out infinite;
+}
+
+@keyframes float-plane {
+  0% { transform: translate(0, 0); }
+  50% { transform: translate(8px, -6px); }
+  100% { transform: translate(0, 0); }
+}
+.animate-float {
+  animation: float-plane 6s ease-in-out infinite;
+}
+
+/* ---- Premium motion ---- */
+
+/* Slow gold sheen sweeping across metallic gold text */
+@keyframes shimmer-sweep {
+  0% { background-position: 200% center; }
+  100% { background-position: -200% center; }
+}
+.shimmer-gold {
+  background-size: 200% auto;
+  animation: shimmer-sweep 7s linear infinite;
+}
+
+/* Shimmering skeleton bars while the itinerary streams in */
+@keyframes skeleton-sweep {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+.skeleton-shimmer {
+  background-image: linear-gradient(
+    90deg,
+    rgba(212, 175, 55, 0.06) 25%,
+    rgba(212, 175, 55, 0.22) 50%,
+    rgba(212, 175, 55, 0.06) 75%
+  );
+  background-size: 200% 100%;
+  animation: skeleton-sweep 1.6s ease-in-out infinite;
+}
+
+/* Soft drifting motion for hero sparkles */
+@keyframes drift {
+  0%, 100% { transform: translate3d(0, 0, 0); opacity: 0.55; }
+  50% { transform: translate3d(6px, -10px, 0); opacity: 1; }
+}
+.animate-drift {
+  animation: drift 9s ease-in-out infinite;
+}
+
+/* Slow cinematic zoom for hero imagery */
+@keyframes ken-burns {
+  0% { transform: scale(1.04); }
+  100% { transform: scale(1.14); }
+}
+.animate-kenburns {
+  animation: ken-burns 22s ease-out forwards;
+}
+
+/* Elegant underline grow for links */
+.link-underline {
+  position: relative;
+}
+.link-underline::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  height: 1px;
+  width: 100%;
+  transform: scaleX(0);
+  transform-origin: left;
+  background: linear-gradient(90deg, var(--color-gold), transparent);
+  transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.link-underline:hover::after {
+  transform: scaleX(1);
+}
+
+/* Respect users who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .animate-twinkle,
+  .animate-float,
+  .animate-drift,
+  .animate-kenburns,
+  .shimmer-gold,
+  .skeleton-shimmer,
+  .animate-bounce {
+    animation: none !important;
+  }
+  * {
+    scroll-behavior: auto !important;
+  }
 }

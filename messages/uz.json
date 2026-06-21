@@ -1,0 +1,301 @@
+{
+  "meta": {
+    "title": "SILKORA TRAVEL — Butun dunyo boʻylab premium sayohatlar",
+    "description": "Butun dunyo va Buyuk Ipak yoʻli boʻylab turlar. Individual marshrutlar, eng yaxshi mehmonxonalar, 24/7 qoʻllab-quvvatlash. Shaxsiy sayohat uchun AI rejalashtiruvchi."
+  },
+  "nav": {
+    "services": "Xizmatlar",
+    "destinations": "Yoʻnalishlar",
+    "tours": "Turlar",
+    "visa": "Vizalar",
+    "blog": "Blog",
+    "planner": "AI rejalashtiruvchi",
+    "reviews": "Sharhlar",
+    "contact": "Aloqa",
+    "cta": "Buyurtma qoldirish",
+    "openMenu": "Menyuni ochish",
+    "closeMenu": "Menyuni yopish"
+  },
+  "hero": {
+    "kicker": "YOUR JOURNEY",
+    "script": "Starts Here",
+    "title": "Biz qalbda qoladigan sayohatlarni yaratamiz",
+    "subtitle": "Butun dunyo va Buyuk Ipak yoʻli boʻylab premium turlar — individual yondashuv va 24/7 gʻamxoʻrlik bilan.",
+    "ctaPlanner": "AI bilan tur tanlash",
+    "ctaContact": "Biz bilan bogʻlanish",
+    "scroll": "Pastga suring"
+  },
+  "pillars": {
+    "world": {
+      "title": "Butun dunyo boʻylab turlar",
+      "desc": "Har qanday did va byudjet uchun 50 dan ortiq yoʻnalish."
+    },
+    "hotels": {
+      "title": "Eng yaxshi mehmonxona va xizmat",
+      "desc": "Tekshirilgan 4–5★ mehmonxonalar va shaxsiy xizmat."
+    },
+    "individual": {
+      "title": "Individual yondashuv",
+      "desc": "Qiziqish va sur'atingizga moslangan marshrut."
+    },
+    "support": {
+      "title": "24/7 qoʻllab-quvvatlash",
+      "desc": "Sayohatingizning har bir bosqichida yoningizdamiz."
+    }
+  },
+  "planner": {
+    "eyebrow": "AI REJALASHTIRUVCHI",
+    "title": "Shaxsiy marshrut 30 soniyada",
+    "subtitle": "Orzuingizni ayting — SILKORA sun'iy intellekti siz uchun kunma-kun batafsil sayohat rejasini tuzadi.",
+    "fields": {
+      "destination": "Yoʻnalish",
+      "destinationPlaceholder": "Samarqand, Maldiv orollari yoki «meni hayratlantiring»",
+      "interests": "Qiziqishlar",
+      "budget": "Byudjet",
+      "duration": "Davomiyligi",
+      "durationUnit": "kun",
+      "travelers": "Sayohatchilar",
+      "pace": "Sur'at"
+    },
+    "interestOpts": {
+      "history": "Tarix va madaniyat",
+      "beach": "Plyaj va dengiz",
+      "food": "Gastronomiya",
+      "culture": "San'at",
+      "shopping": "Shoping",
+      "nature": "Tabiat",
+      "adventure": "Sarguzasht",
+      "wellness": "Spa va dam olish"
+    },
+    "budgetOpts": {
+      "economy": "Ekonom",
+      "comfort": "Komfort",
+      "luxury": "Lyuks"
+    },
+    "paceOpts": {
+      "relaxed": "Bemalol",
+      "balanced": "Muvozanatli",
+      "intense": "Jadal"
+    },
+    "submit": "Marshrut yaratish",
+    "regenerate": "Qaytadan yaratish",
+    "sendToManager": "Menejerga yuborish",
+    "loading": "SILKORA AI marshrutingizni tayyorlamoqda…",
+    "resultTitle": "Sizning shaxsiy marshrutingiz",
+    "demoNotice": "Demo rejim: haqiqiy AI generatsiyasi uchun ANTHROPIC_API_KEY qoʻshing.",
+    "error": "Marshrut yaratib boʻlmadi. Qaytadan urinib koʻring.",
+    "sent": "Rahmat! Marshrut menejerga yuborildi — tez orada bogʻlanamiz.",
+    "presetsTitle": "Yoki tayyor stsenariydan boshlang",
+    "downloadPdf": "PDF yuklab olish",
+    "presets": {
+      "weekendSamarkand": {
+        "label": "Dam olish kunlari Samarqand",
+        "destination": "Samarqand"
+      },
+      "maldivesHoneymoon": {
+        "label": "Maldivada asal oyi",
+        "destination": "Maldiv orollari"
+      },
+      "silkRoad7": {
+        "label": "7 kunda Ipak yoʻli",
+        "destination": "Samarqand, Buxoro, Xiva"
+      },
+      "dubaiFamily": {
+        "label": "Oila bilan Dubay",
+        "destination": "Dubay"
+      }
+    }
+  },
+  "destinations": {
+    "eyebrow": "YOʻNALISHLAR",
+    "title": "Sizni qayerga olib boramiz",
+    "subtitle": "Ipak yoʻlining qadimiy shaharlaridan sayyoramizning eng hashamatli kurortlarigacha.",
+    "silkRoad": "Ipak yoʻli",
+    "luxury": "Lyuks sayohat",
+    "more": "Batafsil",
+    "priceFrom": "{price} dan",
+    "items": {
+      "samarkand": {
+        "name": "Samarqand",
+        "tagline": "Buyuk Ipak yoʻlining yuragi"
+      },
+      "bukhara": {
+        "name": "Buxoro",
+        "tagline": "Ochiq osmon ostidagi muzey-shahar"
+      },
+      "khiva": {
+        "name": "Xiva",
+        "tagline": "Ichan Qal'a ertagi qal'a devorlari ortida"
+      },
+      "maldives": {
+        "name": "Maldiv orollari",
+        "tagline": "Feruza okean ustidagi villalar"
+      },
+      "dubai": {
+        "name": "Dubay",
+        "tagline": "Hashamat, shoping va osmonoʻpar binolar"
+      },
+      "turkey": {
+        "name": "Turkiya",
+        "tagline": "Dengiz, tarix va all-inclusive qulaylik"
+      }
+    }
+  },
+  "services": {
+    "eyebrow": "XIZMATLAR",
+    "title": "Mukammal sayohat uchun hamma narsa",
+    "subtitle": "Vizadan tortib aeroportda kutib olishgacha — har bir tafsilotni oʻz zimmamizga olamiz.",
+    "items": {
+      "tours": {
+        "title": "Tayyor turlar",
+        "desc": "Butun dunyo boʻylab tayyor va individual turlar."
+      },
+      "flights": {
+        "title": "Aviachiptalar",
+        "desc": "Eng yaxshi narxlar va qulay reyslar."
+      },
+      "hotels": {
+        "title": "Mehmonxona va villalar",
+        "desc": "4–5★ joylashuvni tanlash va bron qilish."
+      },
+      "visa": {
+        "title": "Viza qoʻllab-quvvatlash",
+        "desc": "Hujjatlar, anketalar va hamrohlik."
+      },
+      "custom": {
+        "title": "Individual marshrutlar",
+        "desc": "Faqat siz uchun tuzilgan sayohat."
+      },
+      "mice": {
+        "title": "Korporativ va MICE",
+        "desc": "Biznes safarlar, konferensiyalar, insentiv turlar."
+      }
+    }
+  },
+  "about": {
+    "eyebrow": "NEGA SILKORA",
+    "title": "Lyuks darajadagi sayohat — tashvishsiz",
+    "body": "SILKORA TRAVEL — sayohat orzularini benuqson tashkil etilgan safarlarga aylantiradigan jamoa. Biz yoʻnalishlarni ichdan bilamiz, eng yaxshi mehmonxonalar bilan hamkorlik qilamiz va yoʻlingizning har bir kilometrida yoningizdamiz.",
+    "stats": {
+      "years": {
+        "value": "10+",
+        "label": "yillik tajriba"
+      },
+      "clients": {
+        "value": "12 000+",
+        "label": "mamnun sayohatchi"
+      },
+      "destinations": {
+        "value": "50+",
+        "label": "yoʻnalish"
+      }
+    },
+    "values": {
+      "title": "Bizning qadriyatlar",
+      "elegance": "Nafislik",
+      "premium": "Premium",
+      "trust": "Ishonch"
+    }
+  },
+  "testimonials": {
+    "eyebrow": "SHARHLAR",
+    "title": "Sayohatchilarimiz nima deydi",
+    "items": {
+      "1": {
+        "name": "Dilnoza A.",
+        "location": "Toshkent",
+        "text": "Maldiv orollaridagi asal oyimizni mukammal tashkil qilishdi — reysdan to quyosh botishidagi kechki ovqatgacha. Hech narsa haqida oʻylashga hojat qolmadi."
+      },
+      "2": {
+        "name": "Sergey M.",
+        "location": "Samarqand",
+        "text": "Ipak yoʻli boʻylab eng zoʻr tur! Gid, mehmonxonalar, marshrut — hammasi a'lo darajada. Rahmat, SILKORA."
+      },
+      "3": {
+        "name": "Kamola R.",
+        "location": "Buxoro",
+        "text": "24/7 qoʻllab-quvvatlash quruq gap emas. Yarim tunda reysni almashtirib berishdi. Hammaga tavsiya qilaman."
+      }
+    }
+  },
+  "ctaBanner": {
+    "text": "SILKORA TRAVEL bilan dunyoni kashf eting",
+    "button": "Sayohatni boshlash"
+  },
+  "contact": {
+    "eyebrow": "ALOQA",
+    "title": "Yoʻlga chiqishga tayyormisiz?",
+    "subtitle": "Buyurtma qoldiring — ideal turni tanlaymiz va barcha savollaringizga javob beramiz.",
+    "fields": {
+      "name": "Ismingiz",
+      "phone": "Telefon",
+      "destination": "Orzudagi yoʻnalish",
+      "dates": "Sayohat sanasi",
+      "travelers": "Necha kishi",
+      "budget": "Byudjet",
+      "message": "Xabar"
+    },
+    "submit": "Buyurtma qoldirish",
+    "sending": "Yuborilmoqda…",
+    "success": "Rahmat! Tez orada siz bilan bogʻlanamiz.",
+    "error": "Yuborishda xatolik. Keyinroq urinib koʻring yoki Telegramga yozing.",
+    "info": {
+      "phoneLabel": "Telefon",
+      "emailLabel": "Email",
+      "addressLabel": "Ofis",
+      "address": "Toshkent, Oʻzbekiston",
+      "hoursLabel": "Ish vaqti",
+      "hours": "Dush–Shan, 9:00–19:00"
+    },
+    "socials": "Ijtimoiy tarmoqlarda",
+    "sla": "2 soat ichida javob beramiz (Dush–Shan, 9:00–19:00)",
+    "policy": "Bepul maslahat. Bekor qilish va qaytarish shartlari bron qilishda menejer bilan aniqlanadi."
+  },
+  "footer": {
+    "tagline": "Butun dunyo boʻylab premium sayohatlar.",
+    "rights": "Barcha huquqlar himoyalangan.",
+    "nav": "Navigatsiya",
+    "contactTitle": "Aloqa"
+  },
+  "tours": {
+    "eyebrow": "TURLAR",
+    "title": "Tayyor turlar",
+    "subtitle": "Ipak yoʻli va lyuks yoʻnalishlar boʻylab puxta tuzilgan marshrutlar — har birini sizga moslashtiramiz.",
+    "priceFrom": "{price} dan",
+    "perPerson": "kishi boshiga",
+    "nights": "{count} kecha",
+    "groupUpTo": "{count} kishigacha",
+    "duration": "Davomiyligi",
+    "groupSize": "Guruh",
+    "price": "Narx",
+    "highlights": "Tur xususiyatlari",
+    "gallery": "Galereya",
+    "itinerary": "Kunma-kun dastur",
+    "included": "Kiritilgan",
+    "excluded": "Kiritilmagan",
+    "details": "Batafsil",
+    "requestBooking": "Bron qilish",
+    "askWhatsApp": "WhatsApp orqali soʻrash",
+    "backToCatalog": "Barcha turlar",
+    "waMessage": "Assalomu alaykum! «{tour}» turi qiziqtiradi. Mavjud sanalar va narxlarni ayting."
+  },
+  "blog": {
+    "eyebrow": "JURNAL",
+    "title": "Sayohat jurnali",
+    "subtitle": "Keyingi sayohatingiz uchun gʻoyalar, yoʻriqnomalar va ilhom.",
+    "minRead": "{count} daq",
+    "backToBlog": "Barcha maqolalar"
+  },
+  "floating": {
+    "planner": "AI bilan tanlash",
+    "telegram": "Telegram",
+    "whatsapp": "WhatsApp",
+    "instagram": "Instagram",
+    "waMessage": "Assalomu alaykum! SILKORA TRAVEL bilan sayohat rejalashtirmoqchiman."
+  },
+  "lang": {
+    "ru": "Русский",
+    "en": "English",
+    "uz": "Oʻzbekcha"
+  }
+}

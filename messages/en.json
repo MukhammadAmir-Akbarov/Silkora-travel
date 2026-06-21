@@ -1,0 +1,301 @@
+{
+  "meta": {
+    "title": "SILKORA TRAVEL — Premium journeys around the world",
+    "description": "Tours across the world and along the Great Silk Road. Tailor-made itineraries, the finest hotels, 24/7 support. AI planner for your personal journey."
+  },
+  "nav": {
+    "services": "Services",
+    "destinations": "Destinations",
+    "tours": "Tours",
+    "visa": "Visa",
+    "blog": "Blog",
+    "planner": "AI Planner",
+    "reviews": "Reviews",
+    "contact": "Contact",
+    "cta": "Request a trip",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu"
+  },
+  "hero": {
+    "kicker": "YOUR JOURNEY",
+    "script": "Starts Here",
+    "title": "We craft journeys that stay in your heart",
+    "subtitle": "Premium tours around the world and along the Great Silk Road — with a personal touch and 24/7 care.",
+    "ctaPlanner": "Plan with AI",
+    "ctaContact": "Get in touch",
+    "scroll": "Scroll down"
+  },
+  "pillars": {
+    "world": {
+      "title": "Worldwide tours",
+      "desc": "Over 50 destinations for every taste and budget."
+    },
+    "hotels": {
+      "title": "Finest hotels & service",
+      "desc": "Hand-picked 4–5★ hotels and personal service."
+    },
+    "individual": {
+      "title": "Tailor-made approach",
+      "desc": "An itinerary built around your interests and pace."
+    },
+    "support": {
+      "title": "24/7 support",
+      "desc": "We are with you at every step of the trip."
+    }
+  },
+  "planner": {
+    "eyebrow": "AI PLANNER",
+    "title": "A personal itinerary in 30 seconds",
+    "subtitle": "Tell us your dream — SILKORA's AI will build a detailed day-by-day travel plan for you.",
+    "fields": {
+      "destination": "Destination",
+      "destinationPlaceholder": "Samarkand, the Maldives, or “surprise me”",
+      "interests": "Interests",
+      "budget": "Budget",
+      "duration": "Duration",
+      "durationUnit": "days",
+      "travelers": "Travelers",
+      "pace": "Pace"
+    },
+    "interestOpts": {
+      "history": "History & culture",
+      "beach": "Beach & sea",
+      "food": "Food & dining",
+      "culture": "Art & culture",
+      "shopping": "Shopping",
+      "nature": "Nature",
+      "adventure": "Adventure",
+      "wellness": "Spa & wellness"
+    },
+    "budgetOpts": {
+      "economy": "Economy",
+      "comfort": "Comfort",
+      "luxury": "Luxury"
+    },
+    "paceOpts": {
+      "relaxed": "Relaxed",
+      "balanced": "Balanced",
+      "intense": "Packed"
+    },
+    "submit": "Create itinerary",
+    "regenerate": "Regenerate",
+    "sendToManager": "Send to a manager",
+    "loading": "SILKORA AI is crafting your itinerary…",
+    "resultTitle": "Your personal itinerary",
+    "demoNotice": "Demo mode: add ANTHROPIC_API_KEY to enable real AI generation.",
+    "error": "Could not create the itinerary. Please try again.",
+    "sent": "Thank you! Your itinerary was sent to a manager — we'll be in touch soon.",
+    "presetsTitle": "Or start with a ready-made idea",
+    "downloadPdf": "Download PDF",
+    "presets": {
+      "weekendSamarkand": {
+        "label": "Samarkand weekend",
+        "destination": "Samarkand"
+      },
+      "maldivesHoneymoon": {
+        "label": "Maldives honeymoon",
+        "destination": "the Maldives"
+      },
+      "silkRoad7": {
+        "label": "Silk Road in 7 days",
+        "destination": "Samarkand, Bukhara, Khiva"
+      },
+      "dubaiFamily": {
+        "label": "Dubai with family",
+        "destination": "Dubai"
+      }
+    }
+  },
+  "destinations": {
+    "eyebrow": "DESTINATIONS",
+    "title": "Where we'll take you",
+    "subtitle": "From the ancient cities of the Silk Road to the world's most luxurious resorts.",
+    "silkRoad": "Silk Road",
+    "luxury": "Luxury escape",
+    "more": "Learn more",
+    "priceFrom": "from {price}",
+    "items": {
+      "samarkand": {
+        "name": "Samarkand",
+        "tagline": "The heart of the Great Silk Road"
+      },
+      "bukhara": {
+        "name": "Bukhara",
+        "tagline": "A living open-air museum city"
+      },
+      "khiva": {
+        "name": "Khiva",
+        "tagline": "The fairy tale of Itchan Kala"
+      },
+      "maldives": {
+        "name": "Maldives",
+        "tagline": "Overwater villas above turquoise seas"
+      },
+      "dubai": {
+        "name": "Dubai",
+        "tagline": "Luxury, shopping and skyscrapers"
+      },
+      "turkey": {
+        "name": "Turkey",
+        "tagline": "Sea, history and all-inclusive ease"
+      }
+    }
+  },
+  "services": {
+    "eyebrow": "SERVICES",
+    "title": "Everything for the perfect journey",
+    "subtitle": "We handle every detail — from the visa to the airport welcome.",
+    "items": {
+      "tours": {
+        "title": "Turnkey tours",
+        "desc": "Ready-made and bespoke tours worldwide."
+      },
+      "flights": {
+        "title": "Flights",
+        "desc": "Best fares and convenient connections."
+      },
+      "hotels": {
+        "title": "Hotels & villas",
+        "desc": "Selection and booking of 4–5★ stays."
+      },
+      "visa": {
+        "title": "Visa support",
+        "desc": "Documents, forms and full guidance."
+      },
+      "custom": {
+        "title": "Bespoke itineraries",
+        "desc": "A journey built entirely around you."
+      },
+      "mice": {
+        "title": "Corporate & MICE",
+        "desc": "Business trips, conferences, incentive tours."
+      }
+    }
+  },
+  "about": {
+    "eyebrow": "WHY SILKORA",
+    "title": "Luxury travel — without the hassle",
+    "body": "SILKORA TRAVEL is a team that turns travel dreams into flawlessly organised trips. We know our destinations from the inside, partner with the finest hotels and stay by your side on every mile of the way.",
+    "stats": {
+      "years": {
+        "value": "10+",
+        "label": "years in the market"
+      },
+      "clients": {
+        "value": "12,000+",
+        "label": "happy travelers"
+      },
+      "destinations": {
+        "value": "50+",
+        "label": "destinations"
+      }
+    },
+    "values": {
+      "title": "Our values",
+      "elegance": "Elegance",
+      "premium": "Premium",
+      "trust": "Trust"
+    }
+  },
+  "testimonials": {
+    "eyebrow": "REVIEWS",
+    "title": "What our travelers say",
+    "items": {
+      "1": {
+        "name": "Dilnoza A.",
+        "location": "Tashkent",
+        "text": "They organised our honeymoon in the Maldives perfectly — from the flight to a sunset dinner. We didn't have to think about a thing."
+      },
+      "2": {
+        "name": "Sergey M.",
+        "location": "Samarkand",
+        "text": "The best Silk Road tour! Guide, hotels, itinerary — everything was top-notch. Thank you, SILKORA."
+      },
+      "3": {
+        "name": "Kamola R.",
+        "location": "Bukhara",
+        "text": "24/7 support is not just words. They rebooked our flight in the middle of the night. Highly recommend."
+      }
+    }
+  },
+  "ctaBanner": {
+    "text": "Discover the world with SILKORA TRAVEL",
+    "button": "Start your journey"
+  },
+  "contact": {
+    "eyebrow": "CONTACT",
+    "title": "Ready to set off?",
+    "subtitle": "Leave a request — we'll find the perfect tour and answer all your questions.",
+    "fields": {
+      "name": "Your name",
+      "phone": "Phone",
+      "destination": "Dream destination",
+      "dates": "Travel dates",
+      "travelers": "Travelers",
+      "budget": "Budget",
+      "message": "Message"
+    },
+    "submit": "Request a trip",
+    "sending": "Sending…",
+    "success": "Thank you! We'll be in touch shortly.",
+    "error": "Sending failed. Please try later or message us on Telegram.",
+    "info": {
+      "phoneLabel": "Phone",
+      "emailLabel": "Email",
+      "addressLabel": "Office",
+      "address": "Tashkent, Uzbekistan",
+      "hoursLabel": "Working hours",
+      "hours": "Mon–Sat, 9:00–19:00"
+    },
+    "socials": "Find us on social media",
+    "sla": "We reply within 2 hours (Mon–Sat, 9:00–19:00)",
+    "policy": "Free consultation. Cancellation & refund terms are confirmed with your manager at booking."
+  },
+  "footer": {
+    "tagline": "Premium journeys around the world.",
+    "rights": "All rights reserved.",
+    "nav": "Navigation",
+    "contactTitle": "Contact"
+  },
+  "tours": {
+    "eyebrow": "TOURS",
+    "title": "Ready-made tours",
+    "subtitle": "Carefully crafted Silk Road and luxury itineraries — every one can be tailored to you.",
+    "priceFrom": "from {price}",
+    "perPerson": "per person",
+    "nights": "{count, plural, one {# night} other {# nights}}",
+    "groupUpTo": "up to {count}",
+    "duration": "Duration",
+    "groupSize": "Group",
+    "price": "Price",
+    "highlights": "Tour highlights",
+    "gallery": "Gallery",
+    "itinerary": "Day-by-day",
+    "included": "Included",
+    "excluded": "Not included",
+    "details": "View tour",
+    "requestBooking": "Request booking",
+    "askWhatsApp": "Ask on WhatsApp",
+    "backToCatalog": "All tours",
+    "waMessage": "Hello! I'm interested in the \"{tour}\" tour. Could you share available dates and pricing?"
+  },
+  "blog": {
+    "eyebrow": "JOURNAL",
+    "title": "Travel journal",
+    "subtitle": "Ideas, guides and inspiration for your next journey.",
+    "minRead": "{count} min",
+    "backToBlog": "All articles"
+  },
+  "floating": {
+    "planner": "Plan with AI",
+    "telegram": "Telegram",
+    "whatsapp": "WhatsApp",
+    "instagram": "Instagram",
+    "waMessage": "Hello! I'd like to plan a trip with SILKORA TRAVEL."
+  },
+  "lang": {
+    "ru": "Русский",
+    "en": "English",
+    "uz": "Oʻzbekcha"
+  }
+}
