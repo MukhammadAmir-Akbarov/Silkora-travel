@@ -4,6 +4,9 @@ import { site } from "@/lib/site";
 import { TOUR_SLUGS } from "@/lib/tours";
 import { POST_SLUGS } from "@/lib/blog";
 
+// Rendered at build time — required for the static export (GitHub Pages) build.
+export const dynamic = "force-static";
+
 export default function sitemap(): MetadataRoute.Sitemap {
   const paths = [
     "",

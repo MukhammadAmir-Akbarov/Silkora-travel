@@ -25,6 +25,9 @@ import {
   PLANNER_PRESETS,
 } from "@/lib/constants";
 import { site } from "@/lib/site";
+import { STATIC_DEMO } from "@/lib/static-mode";
+import { demoItinerary } from "@/lib/demo-itinerary";
+import type { PlannerInput } from "@/lib/prompts";
 
 type PlanConfig = {
   destination: string;
@@ -167,6 +170,26 @@ export function AiPlanner() {
     setResult("");
     setMode(null);
     setSendState("idle");
+
+    // Static (GitHub Pages) build: no backend — render the built-in sample
+    // itinerary on the client so the planner is fully demonstrable.
+    if (STATIC_DEMO) {
+      const md = demoItinerary({
+        destination: c.destination,
+        interests: c.interests.map((k) => t(`interestOpts.${k}`)),
+        budget: t(`budgetOpts.${c.budget}`),
+        durationDays: c.duration,
+        travelers: c.travelers,
+        pace: t(`paceOpts.${c.pace}`),
+        locale: locale as PlannerInput["locale"],
+      });
+      setMode("demo");
+      await new Promise((r) => setTimeout(r, 550)); // let the skeleton breathe
+      setResult(md);
+      setLoading(false);
+      return;
+    }
+
     try {
       const res = await fetch("/api/plan", {
         method: "POST",
@@ -225,6 +248,13 @@ export function AiPlanner() {
 
   async function sendToManager() {
     setSendState("sending");
+    // Static demo build has no lead endpoint — show the success state so the
+    // flow is still demonstrable (on the live site this posts to Telegram).
+    if (STATIC_DEMO) {
+      await new Promise((r) => setTimeout(r, 600));
+      setSendState("sent");
+      return;
+    }
     try {
       const res = await fetch("/api/lead", {
         method: "POST",

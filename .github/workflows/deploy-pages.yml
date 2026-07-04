@@ -1,0 +1,85 @@
+name: Deploy showcase to GitHub Pages
+
+# Builds a STATIC export of the site (no server) and publishes it to Pages.
+# The AI planner and contact form fall back to a client-side demo, since
+# GitHub Pages cannot run the /api/* route handlers. For a fully functional
+# deploy (live AI + Telegram leads), host on Vercel instead — a normal
+# `next build` keeps all server features; STATIC_EXPORT is what strips them.
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+# Least-privilege token scopes required by the Pages deploy action.
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Never run two Pages deploys at once; let an in-flight one finish.
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    env:
+      STATIC_EXPORT: "true"
+      PAGES_BASE_PATH: /Silkora-travel
+      NEXT_PUBLIC_STATIC_DEMO: "true"
+      NEXT_PUBLIC_SITE_URL: https://mukhammadamir-akbarov.github.io/Silkora-travel
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - run: npm ci
+
+      # Static export cannot include dynamic route handlers or the i18n proxy,
+      # so drop them from this build only (the repo keeps them for Vercel).
+      - name: Strip server-only files for static export
+        run: rm -rf app/api proxy.ts
+
+      - name: Build static site
+        run: npm run build
+
+      - name: Add root redirect + disable Jekyll
+        run: |
+          touch out/.nojekyll
+          cat > out/index.html <<'HTML'
+          <!doctype html>
+          <html lang="ru">
+            <head>
+              <meta charset="utf-8" />
+              <meta name="viewport" content="width=device-width, initial-scale=1" />
+              <meta http-equiv="refresh" content="0; url=./ru/" />
+              <link rel="canonical" href="./ru/" />
+              <title>SILKORA TRAVEL</title>
+              <script>
+                location.replace("./ru/" + location.search + location.hash);
+              </script>
+            </head>
+            <body style="background:#0D0D0D;color:#D4AF37;font-family:sans-serif;text-align:center;padding:4rem 1rem">
+              <a href="./ru/" style="color:#D4AF37">SILKORA TRAVEL →</a>
+            </body>
+          </html>
+          HTML
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: out
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

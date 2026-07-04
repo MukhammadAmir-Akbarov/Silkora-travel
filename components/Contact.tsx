@@ -7,6 +7,7 @@ import { SectionHeading } from "./ui/brand";
 import { Reveal } from "./ui/Reveal";
 import { Button } from "./ui/Button";
 import { site, socials } from "@/lib/site";
+import { STATIC_DEMO } from "@/lib/static-mode";
 
 const inputCls =
   "w-full rounded-xl border border-gold/20 bg-ink px-4 py-3 text-sm text-white placeholder:text-faint focus:border-gold";
@@ -23,6 +24,14 @@ export function Contact() {
     const form = e.currentTarget;
     const data = new FormData(form);
     setState("sending");
+    // Static demo build (GitHub Pages): no lead endpoint. Show the success
+    // state so the form flow is demonstrable; live site posts to Telegram.
+    if (STATIC_DEMO) {
+      await new Promise((r) => setTimeout(r, 700));
+      setState("sent");
+      form.reset();
+      return;
+    }
     try {
       const res = await fetch("/api/lead", {
         method: "POST",

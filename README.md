@@ -16,6 +16,14 @@
 2. (Необязательно) добавьте `ANTHROPIC_API_KEY` в **Environment Variables**, чтобы включить реальный AI-планировщик. Без него сайт работает в демо-режиме.
 3. Через ~1 минуту получите ссылку вида `https://silkora-travel.vercel.app` — её можно отправлять кому угодно.
 
+### Витрина на GitHub Pages
+
+Репозиторий также публикует **статическую витрину** на GitHub Pages при каждом push в `main` (workflow [`.github/workflows/deploy-pages.yml`](.github/workflows/deploy-pages.yml)) → `https://mukhammadamir-akbarov.github.io/Silkora-travel/`.
+
+Чтобы включить: **Settings → Pages → Source: GitHub Actions**.
+
+⚠️ Pages — это только статика, без сервера. Поэтому AI-планировщик и форма заявки работают в **демо-режиме на клиенте** (планировщик показывает образец маршрута, форма — успешную отправку без реальной доставки). Для полностью рабочего сайта (живой AI + заявки в Telegram) используйте **Vercel**.
+
 ---
 
 ## Запуск
