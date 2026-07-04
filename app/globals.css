@@ -28,6 +28,12 @@
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 5rem;
+  /* Contain full-bleed decorative glows (absolute + -translate-x-1/2, wider
+     than the screen) so they never widen the layout on narrow phones. `clip`
+     on the root works where `overflow-x: hidden` on body alone does not — it
+     clips transformed/absolute descendants without creating a scroll box, so
+     sticky positioning and smooth scrolling keep working. */
+  overflow-x: clip;
 }
 
 body {
@@ -35,7 +41,7 @@ body {
   color: #ffffff;
   font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;
-  overflow-x: hidden;
+  overflow-x: clip;
 }
 
 /* ---- Brand utilities ---- */
