@@ -37,12 +37,30 @@ npm run start
 
 ---
 
+## AI-планировщик: выбор движка (бесплатно или платно)
+
+Планировщик поддерживает несколько движков. Выбирается через `AI_PROVIDER`, либо определяется автоматически: `groq → anthropic → ollama → demo`.
+
+| Движок | Цена | Где работает | Как включить |
+|---|---|---|---|
+| **Ollama** (локально) | 🟢 бесплатно | только на вашем ПК | установить [ollama.com](https://ollama.com) → `ollama pull qwen2.5:7b` → `AI_PROVIDER=ollama` |
+| **Groq** (облако) | 🟢 бесплатно* | везде, в т.ч. на сайте Vercel | ключ на [console.groq.com/keys](https://console.groq.com/keys) → `AI_PROVIDER=groq` + `GROQ_API_KEY=...` |
+| **Anthropic Claude** | 🔴 платно | везде | `ANTHROPIC_API_KEY=...` |
+| **Demo** | — | везде | ничего не задавать — отдаётся пример маршрута |
+
+\* у бесплатного тарифа Groq есть лимиты запросов, но карта не требуется.
+
+> **Рекомендация:** локально — `ollama` (быстро и бесплатно), на публичном сайте — `groq` (бесплатно и доступно всем посетителям). Ollama НЕ работает на Vercel — у сервера нет доступа к вашему компьютеру.
+
 ## Переменные окружения (`.env.local`)
 
 | Переменная | Назначение |
 |---|---|
-| `ANTHROPIC_API_KEY` | Включает реальный AI-планировщик. **Без неё** работает демо-режим (пример маршрута). |
-| `ANTHROPIC_MODEL` | Необязательно. По умолчанию `claude-sonnet-4-6`. Альтернативы: `claude-opus-4-8` (макс. качество), `claude-haiku-4-5-20251001` (дешевле). |
+| `AI_PROVIDER` | `ollama` / `groq` / `anthropic` / `demo`. Если пусто — автоопределение. |
+| `OLLAMA_MODEL` | Модель Ollama. По умолчанию `qwen2.5:7b`. |
+| `GROQ_API_KEY` + `GROQ_MODEL` | Бесплатный облачный движок. Модель по умолчанию `llama-3.3-70b-versatile`. |
+| `ANTHROPIC_API_KEY` + `ANTHROPIC_MODEL` | Claude (платно). Модель по умолчанию `claude-sonnet-4-6`. |
+| `PLAN_DAILY_LIMIT` | Дневной лимит облачных генераций (защита от расходов). Ollama не лимитируется. |
 | `TELEGRAM_BOT_TOKEN` + `TELEGRAM_CHAT_ID` | Заявки падают в Telegram-чат (рекомендуется). Бот создаётся через @BotFather. |
 | `RESEND_API_KEY` + `LEAD_EMAIL` | Альтернатива — заявки на email через [Resend](https://resend.com). |
 
