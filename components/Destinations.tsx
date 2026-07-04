@@ -1,6 +1,6 @@
 "use client";
 
-import Image from "next/image";
+import { PublicImage as Image } from "@/components/ui/PublicImage";
 import { useTranslations } from "next-intl";
 import { ArrowUpRight } from "lucide-react";
 import { Link } from "@/i18n/navigation";

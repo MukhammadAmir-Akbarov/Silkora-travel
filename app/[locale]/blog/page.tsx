@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import Image from "next/image";
+import { PublicImage as Image } from "@/components/ui/PublicImage";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { ArrowUpRight, Clock } from "lucide-react";
 import { Link } from "@/i18n/navigation";

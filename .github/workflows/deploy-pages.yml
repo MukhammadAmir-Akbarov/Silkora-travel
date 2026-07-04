@@ -28,6 +28,8 @@ jobs:
     env:
       STATIC_EXPORT: "true"
       PAGES_BASE_PATH: /Silkora-travel
+      # Prefix for local public/ images (next/image doesn't add basePath here).
+      NEXT_PUBLIC_BASE_PATH: /Silkora-travel
       NEXT_PUBLIC_STATIC_DEMO: "true"
       NEXT_PUBLIC_SITE_URL: https://mukhammadamir-akbarov.github.io/Silkora-travel
     steps:
